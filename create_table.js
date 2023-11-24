@@ -3,7 +3,6 @@ const path = require("path");
 const xlsx = require("xlsx");
 
 const scenarioFolder = fs.readdirSync(path.join(__dirname, "scenario"));
-const rusScenarioFolder = fs.readdirSync(path.join(__dirname, "rus_scenario"));
 
 const scenarioFilesNames = [];
 
@@ -68,16 +67,10 @@ const getPhrases = scenario => {
 }
 
 const phrases = [];
-const rusPhrases = [];
 
 scenarioFolder.forEach(el => {
     const scenarioFile = fs.readFileSync(path.join(__dirname, "scenario", el), "utf16le").toString().split("\n");
     phrases.push(getPhrases(scenarioFile));
-});
-
-rusScenarioFolder.forEach(el => {
-    const scenarioFile = fs.readFileSync(path.join(__dirname, "rus_scenario", el), "utf16le").toString().split("\n");
-    rusPhrases.push(getPhrases(scenarioFile));
 });
 
 for (let i = 0; i < phrases.length; i++) {
@@ -86,7 +79,7 @@ for (let i = 0; i < phrases.length; i++) {
     const wsData = [];
 
     for (let s = 0; s < phrases[i].length; s++) {
-        wsData.push([phrases[i][s][0], phrases[i][s][1], rusPhrases[i][s][1]]);
+        wsData.push([phrases[i][s][0], phrases[i][s][1]]);
     }
 
     const ws = xlsx.utils.aoa_to_sheet(wsData);
