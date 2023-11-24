@@ -1,5 +1,5 @@
 # Yosuga and Haruka Table Creator
-Инструмент, созданный для того, чтобы удобно переводить игру _Yosuga no Sora_ или _Haruka na Sora_ в Excel-таблицах. Причина создания этого проекта проста: [_VNTextPatch_](https://github.com/arcusmaximus/VNTranslationTools/tree/main) работает некорректно в случае создания таблицы конректно для этих двух игр.
+Инструмент, созданный для того, чтобы удобно переводить игру _Yosuga no Sora_ или _Haruka na Sora_ в Excel-таблицах. Причина создания этого проекта проста: [_VNTextPatch_](https://github.com/arcusmaximus/VNTranslationTools/tree/main) работает некорректно в случае создания таблицы конкретно для этих двух игр.
 
 # Usage
 > Для работы с программой нужно обязательно иметь установленный на компьютере [_Node.js_](https://nodejs.org/ru)!
