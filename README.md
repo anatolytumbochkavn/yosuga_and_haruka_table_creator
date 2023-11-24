@@ -1,7 +1,17 @@
 # Yosuga and Haruka Table Creator
+A tool created to conveniently translate the game _Yosuga no Sora_ or _Haruka na Sora_ in Excel spreadsheets. The reason for creating this project is simple: [_VNTextPatch_](https://github.com/arcusmaximus/VNTranslationTools/tree/main) does not work correctly when creating a table specifically for these two games.
+
 Инструмент, созданный для того, чтобы удобно переводить игру _Yosuga no Sora_ или _Haruka na Sora_ в Excel-таблицах. Причина создания этого проекта проста: [_VNTextPatch_](https://github.com/arcusmaximus/VNTranslationTools/tree/main) работает некорректно в случае создания таблицы конкретно для этих двух игр.
 
 # Usage
+> It is mandatory to have [_Node.js_](https://nodejs.org/ru) installed on your computer to work with the program!
+
+To use the application, follow these instructions:
+1. __If you are downloading the project from the _Releases_ tab, you can skip this step.__ Create several folders with the following names: _excel_output_, _output_, _rpy_scenario_, _scenario_. If you choose other names for the folders, the program will generate an error.
+2. Move all scenario files on the _KiriKiri_ engine (you can find them either in [English translation of your chosen game](https://trjr.wordpress.com/download/) or in [our project on rebuilding _Yosuga no Sora_ or _Haruka na Sora_ to _Ren'Py_](https://github.com/anatolytumbochkavn/haruka_renpy_port)) to the _scenario_ folder, and files with the _.rpy_ extension to the _rpy_scenario_ folder.
+3. Navigate to the folder path at the command line and type _node create_table_ – you will get the finished Excel spreadsheets in the _excel_output_ folder. The first column will have the character names, the second column will have the English text, and the third column should be your translation.
+4. After all tables will be filled, go to the same folder path and write _node read_table_ – you will get translated files with extension _.rpy_ in the _output_ folder.
+
 > Для работы с программой обязательно иметь установленный на компьютере [_Node.js_](https://nodejs.org/ru)!
 
 Для того чтобы использовать приложение, следуйте этим указаниям:
